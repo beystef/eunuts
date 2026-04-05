@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Current State | EU Aflatoxin Trade Project</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="site-sidebar">
+      <a class="site-mark" href="index.html">EU Aflatoxin Trade Project</a>
+      <p class="site-note">Live project status and near-term next steps.</p>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="proposal.html">Proposal</a>
+        <a class="active" href="current-state.html">Current State</a>
+        <a href="eda.html">EDA</a>
+        <a href="data.html">Data</a>
+      </nav>
+    </aside>
+
+    <main class="site-main prose-page">
+      <header class="page-header">
+        <p class="eyebrow">Current State</p>
+        <h1>Where the Project Stands</h1>
+        <p class="timestamp">Last updated manually as the project evolves.</p>
+      </header>
+
+      <section class="grid two-up">
+        <article class="card status-card">
+          <h2>Completed</h2>
+          <ul class="flat-list">
+            <li>Raw Comtrade export collection script created.</li>
+            <li>Yearly raw files organized by HS6 code and year.</li>
+            <li>Filtering script created for structural cleaning and log-MAD trimming.</li>
+            <li>Preliminary plotting pipeline created for heatmaps and top-country summaries.</li>
+          </ul>
+        </article>
+        <article class="card status-card">
+          <h2>In Progress</h2>
+          <ul class="flat-list">
+            <li>Full raw data collection across all HS6 products and years.</li>
+            <li>Processed yearly dataset generation after filtering.</li>
+            <li>First-pass descriptive review of country coverage and trade volumes.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Near-Term Next Steps</h2>
+        <ol class="roadmap">
+          <li>Finish downloading the full monthly bilateral export sample.</li>
+          <li>Run filtering across all yearly files and inspect processed coverage.</li>
+          <li>Review the EDA outputs to identify consistent exporters and major importing markets.</li>
+          <li>Construct a panel-ready dataset for treated and placebo products.</li>
+          <li>Add policy-timing variables and begin the first baseline specifications.</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Project Files</h2>
+        <p>The core scripts currently used in the workflow are listed below.</p>
+        <ul class="flat-list">
+          <li><a class="text-link" href="assets/code/collect_raw_data.py">collect_raw_data.py</a></li>
+          <li><a class="text-link" href="assets/code/filter_data.py">filter_data.py</a></li>
+          <li><a class="text-link" href="assets/code/plot_preliminary_figures.py">plot_preliminary_figures.py</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

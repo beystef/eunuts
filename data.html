@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data | EU Aflatoxin Trade Project</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="site-sidebar">
+      <a class="site-mark" href="index.html">EU Aflatoxin Trade Project</a>
+      <p class="site-note">Raw inputs, processed files, and product coverage.</p>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="proposal.html">Proposal</a>
+        <a href="current-state.html">Current State</a>
+        <a href="eda.html">EDA</a>
+        <a class="active" href="data.html">Data</a>
+      </nav>
+    </aside>
+
+    <main class="site-main prose-page">
+      <header class="page-header">
+        <p class="eyebrow">Data</p>
+        <h1>Data Sources and Product Coverage</h1>
+        <p>The current pipeline focuses on monthly bilateral HS6 export data from UN Comtrade.</p>
+      </header>
+
+      <section class="card">
+        <h2>Products Covered</h2>
+        <div class="code-block">
+          <p>080221, 080222, 080211, 080212, 080231, 080232, 080251, 080252, 120241, 120242, 120740</p>
+        </div>
+      </section>
+
+      <section class="grid two-up">
+        <article class="card">
+          <h2>Raw Data</h2>
+          <p>Stored as yearly files in <code>data/raw/&lt;HS6&gt;_&lt;YEAR&gt;.csv</code>.</p>
+        </article>
+        <article class="card">
+          <h2>Processed Data</h2>
+          <p>Stored as yearly filtered files in <code>data/processed/&lt;HS6&gt;_&lt;YEAR&gt;.csv</code>.</p>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Current Variables Used</h2>
+        <ul class="flat-list">
+          <li><code>year_month</code></li>
+          <li><code>reporterISO</code></li>
+          <li><code>partnerISO</code></li>
+          <li><code>cmdCode</code></li>
+          <li><code>primaryValue</code></li>
+          <li><code>NetWeight</code></li>
+          <li><code>UnitValue</code></li>
+          <li><code>LogUnitValue</code></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

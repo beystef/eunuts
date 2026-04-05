@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EDA | EU Aflatoxin Trade Project</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="site-sidebar">
+      <a class="site-mark" href="index.html">EU Aflatoxin Trade Project</a>
+      <p class="site-note">Exploratory data analysis, figures, and first descriptive insights.</p>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="proposal.html">Proposal</a>
+        <a href="current-state.html">Current State</a>
+        <a class="active" href="eda.html">EDA</a>
+        <a href="data.html">Data</a>
+      </nav>
+    </aside>
+
+    <main class="site-main prose-page">
+      <header class="page-header">
+        <p class="eyebrow">EDA</p>
+        <h1>Exploratory Data Analysis</h1>
+        <p>This page collects the first descriptive outputs from the filtered trade data.</p>
+      </header>
+
+      <section class="grid three-up">
+        <article class="card">
+          <h2>Heatmaps</h2>
+          <p>Interactive yearly heatmaps for exporter frequency, importer volume, and exporter volume.</p>
+          <a class="text-link" href="assets/figures/preliminary/heatmaps.html">Open interactive heatmaps</a>
+        </article>
+        <article class="card">
+          <h2>Exporter Charts</h2>
+          <p>Top exporter frequencies and volumes by commodity.</p>
+          <a class="text-link" href="exporter-frequencies.html">Open exporter frequencies gallery</a>
+          <a class="text-link" href="exporter-volumes.html">Open exporter volumes gallery</a>
+        </article>
+        <article class="card">
+          <h2>Importer Charts</h2>
+          <p>Top importer frequencies and volumes by commodity.</p>
+          <a class="text-link" href="importer-frequencies.html">Open importer frequencies gallery</a>
+          <a class="text-link" href="importer-volumes.html">Open importer volumes gallery</a>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Interpretation Notes</h2>
+        <ul class="flat-list">
+          <li>Coverage heatmaps are useful for spotting persistent exporters and missing years.</li>
+          <li>Importer and exporter trade-volume heatmaps help identify dominant bilateral patterns.</li>
+          <li>Top-country summaries are intended as sample-construction guides before regression analysis.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Analysis Outputs</h2>
+        <ul class="flat-list">
+          <li><a class="text-link" href="assets/data/selected_tables/coverage_by_hs6.csv">coverage_by_hs6.csv</a></li>
+          <li><a class="text-link" href="assets/data/selected_tables/data_quality_by_hs6.csv">data_quality_by_hs6.csv</a></li>
+          <li><a class="text-link" href="assets/data/selected_tables/top_exporters_by_hs6.csv">top_exporters_by_hs6.csv</a></li>
+          <li><a class="text-link" href="assets/data/selected_tables/eu_vs_noneu_summary_by_hs6.csv">eu_vs_noneu_summary_by_hs6.csv</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

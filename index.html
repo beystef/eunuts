@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EU Aflatoxin Trade Project</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="site-sidebar">
+      <a class="site-mark" href="index.html">EU Aflatoxin Trade Project</a>
+      <p class="site-note">ECON 301 research site tracking the proposal, current workflow, and exploratory analysis.</p>
+      <nav class="site-nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="proposal.html">Proposal</a>
+        <a href="current-state.html">Current State</a>
+        <a href="eda.html">EDA</a>
+        <a href="data.html">Data</a>
+      </nav>
+    </aside>
+
+    <main class="site-main">
+      <section class="hero">
+        <p class="eyebrow">Trade Policy · Food Safety · Causal Inference</p>
+        <h1>The Causal Impact of EU Aflatoxin Regulations on Global Nut Trade Pricing</h1>
+        <p class="hero-copy">
+          This project studies whether European Union aflatoxin regulations changed the pricing structure
+          of bilateral exports in high-risk nuts and oilseeds. The core empirical question is whether stricter
+          SPS enforcement pushed exporters toward quality upgrading, trade destruction, or both.
+        </p>
+        <div class="button-row">
+          <a class="button" href="proposal.html">Read Proposal</a>
+          <a class="button button-secondary" href="eda.html">View EDA</a>
+        </div>
+      </section>
+
+      <section class="grid two-up">
+        <article class="card">
+          <h2>Research Question</h2>
+          <p>
+            What is the causal impact of staggered EU aflatoxin regulations on bilateral export unit values
+            for susceptible tree nuts and oilseeds?
+          </p>
+        </article>
+        <article class="card">
+          <h2>Current Scope</h2>
+          <p>
+            Monthly bilateral export data at the HS6 level, 2000 to 2023, with current emphasis on cleaning,
+            coverage checks, and descriptive patterns before regression-ready panel construction.
+          </p>
+        </article>
+      </section>
+
+      <section class="grid three-up">
+        <article class="card">
+          <h2>Proposal</h2>
+          <p>Motivation, literature, data plan, and empirical strategy for the project.</p>
+          <a class="text-link" href="proposal.html">Open proposal page</a>
+        </article>
+        <article class="card">
+          <h2>Current State</h2>
+          <p>Status notes on data collection, filtering, plot generation, and the next research steps.</p>
+          <a class="text-link" href="current-state.html">Open progress page</a>
+        </article>
+        <article class="card">
+          <h2>EDA</h2>
+          <p>Exploratory figures, coverage patterns, and the first descriptive summaries from processed data.</p>
+          <a class="text-link" href="eda.html">Open EDA page</a>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Project Roadmap</h2>
+        <ol class="roadmap">
+          <li>Collect monthly bilateral export data from UN Comtrade for the target HS6 products.</li>
+          <li>Filter structural noise and trim unit-value outliers using log-MAD rules.</li>
+          <li>Build descriptive summaries for exporter coverage, importer coverage, and trade volumes.</li>
+          <li>Construct a regression-ready panel with policy timing and tariff variables.</li>
+          <li>Estimate baseline and event-study specifications.</li>
+        </ol>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

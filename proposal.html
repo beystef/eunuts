@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proposal | EU Aflatoxin Trade Project</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="site-sidebar">
+      <a class="site-mark" href="index.html">EU Aflatoxin Trade Project</a>
+      <p class="site-note">Academic proposal page based on the current LaTeX draft.</p>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="proposal.html">Proposal</a>
+        <a href="current-state.html">Current State</a>
+        <a href="eda.html">EDA</a>
+        <a href="data.html">Data</a>
+      </nav>
+    </aside>
+
+    <main class="site-main proposal-main">
+      <article class="proposal-paper">
+        <header class="proposal-header">
+          <p class="paper-kicker">ECON 301 · Stage B Proposal</p>
+          <h1>The Causal Impact of EU Aflatoxin Regulations on Global Nut Trade Pricing Dynamics</h1>
+          <p class="paper-author">Yusuf Efdal Yılmaz</p>
+          <p class="paper-date">Current web version based on <code>website/proposal.tex</code></p>
+        </header>
+
+        <section class="proposal-section">
+          <h2>Abstract</h2>
+          <p>
+            This project studies whether staggered European Union aflatoxin regulations causally affect bilateral export
+            unit values in high-risk tree nuts and oilseeds. The empirical motivation is to distinguish between two channels:
+            quality upgrading, where stricter screening raises observed unit values by filtering out lower-quality shipments,
+            and trade destruction, where regulation acts as a barrier that reduces market access without clear quality gains.
+            The project uses monthly bilateral HS6 export data, policy timing evidence, and a fixed-effects framework to examine
+            how trade pricing responds to food-safety regulation.
+          </p>
+        </section>
+
+        <section class="proposal-section">
+          <h2>1. Research Question and Motivation</h2>
+          <p>
+            The central research question is: what is the causal impact of staggered EU aflatoxin border regulations on the
+            bilateral export unit values of susceptible tree nuts and oilseeds from major producing countries?
+          </p>
+          <p>
+            The motivation follows the increasing role of non-tariff measures in agricultural trade. As tariffs have declined,
+            sanitary and phytosanitary measures and maximum residue limits have become central instruments shaping international
+            market access. EU aflatoxin enforcement is a particularly relevant case because it is stringent, repeatedly enforced,
+            and highly consequential for exporters in products such as hazelnuts, pistachios, almonds, peanuts, walnuts, and sesame.
+          </p>
+          <p>
+            Turkey is especially important in this context because it is the world’s leading hazelnut exporter and has faced
+            repeated scrutiny in the EU over aflatoxin-related controls. This creates a substantive and policy-relevant setting
+            for studying whether the regulation primarily improves quality composition or instead operates as a disguised trade barrier.
+          </p>
+        </section>
+
+        <section class="proposal-section">
+          <h2>2. Literature Discussion</h2>
+          <p>
+            The proposal places the project in the broader literature on SPS measures, MRLs, and agricultural trade. A large
+            share of this literature relies on gravity models to estimate aggregate trade costs. Those studies are useful for
+            broad trade effects, but they are less suited for identifying product-level timing and price dynamics in bilateral pairs.
+          </p>
+          <p>
+            The proposal highlights three strands. The first studies general SPS and TBT barriers in agricultural trade. The
+            second focuses specifically on aflatoxin regulation and developing-country exports. The third explores heterogeneity,
+            adaptation, and quality upgrading under stricter standards. Across these strands, the key gap is that most papers rely
+            on trade values or aggregate flows rather than unit values, making it difficult to separate quantity contraction from
+            quality upgrading.
+          </p>
+          <p>
+            This project aims to contribute by using monthly bilateral variation and export unit values, with placebo products
+            included to test whether any observed pricing response is specific to high-risk regulated products.
+          </p>
+        </section>
+
+        <section class="proposal-section">
+          <h2>3. Data Plan</h2>
+          <p>
+            The data are designed as a high-frequency exporter-importer-product-month panel covering January 2000 to December 2023.
+            Monthly frequency is especially useful because yearly aggregation could mask within-year timing around policy adoption
+            and enforcement.
+          </p>
+          <p>
+            The treated products are hazelnuts, pistachios, almonds, and peanuts at the HS6 level. Walnuts and sesame seeds serve
+            as placebo products because they share logistics and trade partners but face lower aflatoxin concern. Trade values and
+            quantities come from UN Comtrade and are used to construct export unit values. Policy timing is intended to be assembled
+            from TRAINS notifications and validated using RASFF border notifications. Tariff controls are planned through WITS or TRAINS.
+          </p>
+          <div class="paper-table">
+            <div class="paper-row paper-head">
+              <span>Role</span>
+              <span>Variable</span>
+              <span>Description</span>
+            </div>
+            <div class="paper-row">
+              <span>Outcome</span>
+              <span>ln(UV<sub>ijct</sub>)</span>
+              <span>Log export unit value in USD/kg for HS6 product <em>c</em> from exporter <em>i</em> to importer <em>j</em> in month <em>t</em>.</span>
+            </div>
+            <div class="paper-row">
+              <span>Main explanatory</span>
+              <span>Policy<sub>ijct</sub><sup>(d)</sup></span>
+              <span>Indicator for whether aflatoxin regime <em>d</em> is active for a bilateral product observation in month <em>t</em>.</span>
+            </div>
+            <div class="paper-row">
+              <span>Control</span>
+              <span>Tariff<sub>ijcτ(t)</sub></span>
+              <span>Applied bilateral ad valorem tariff matched at the HS6-year level.</span>
+            </div>
+            <div class="paper-row">
+              <span>Fixed effects</span>
+              <span>δ<sub>ic</sub>, λ<sub>jt</sub>, θ<sub>m</sub></span>
+              <span>Exporter-commodity, importer-time, and month-of-year fixed effects.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="proposal-section">
+          <h2>4. Empirical Model and Specification Choices</h2>
+          <p>
+            The baseline model relates monthly export unit values to the currently active aflatoxin regime while controlling
+            for bilateral tariffs and fixed effects. The proposal’s key coefficient is the pricing response to regulation.
+            A positive sign is consistent with quality upgrading and selective compliance; a negative sign is more consistent
+            with trade-destruction or barrier effects.
+          </p>
+          <div class="equation-block">
+            <p>
+              ln(UV<sub>ijct</sub>) = β<sub>0</sub> + Σ<sub>d</sub> β<sub>d</sub> Policy<sub>ijct</sub><sup>(d)</sup>
+              + β<sub>1</sub> Tariff<sub>ijcτ(t)</sub> + δ<sub>ic</sub> + λ<sub>jt</sub> + θ<sub>m</sub> + ε<sub>ijct</sub>
+            </p>
+          </div>
+          <p>
+            The log-linear form is chosen because unit values are positive and right-skewed, percentage interpretations are convenient,
+            and tariffs can remain in levels without introducing arbitrary log transformations for zero values.
+          </p>
+        </section>
+
+        <section class="proposal-section">
+          <h2>5. Endogeneity and Causal Interpretation</h2>
+          <p>
+            The proposal addresses causal interpretation through several diagnostics. First, an event-study design around the first
+            policy date is intended to assess pre-trends and post-policy dynamics. Second, importer-time and exporter-commodity fixed
+            effects absorb important confounding sources. Third, reverse causality is considered unlikely because EU regulation typically
+            follows slow administrative and legislative processes rather than reacting to short-run price movements.
+          </p>
+          <p>
+            The proposal also notes measurement error in unit values and potential selection bias if some bilateral relationships exit
+            under stricter regulation. A falsification exercise using low-risk placebo products is intended to test whether the estimated
+            policy effects are specific to treated products rather than general macroeconomic shifts affecting European agricultural imports.
+          </p>
+        </section>
+
+        <section class="proposal-section">
+          <h2>References</h2>
+          <ul class="reference-list">
+            <li>Anders, S., and J. A. Caswell. 2009. “Standards as Barriers versus Standards as Catalysts.” <em>American Journal of Agricultural Economics</em> 91 (2): 310-321.</li>
+            <li>Crivelli, P., and J. Gröschl. 2016. “The Impact of Sanitary and Phytosanitary Measures on Market Entry and Trade Flows.” <em>The World Economy</em> 39 (3): 444-473.</li>
+            <li>Disdier, A.-C., L. Fontagné, and M. Mimouni. 2008. “The Impact of Regulations on Agricultural Trade.” <em>American Journal of Agricultural Economics</em> 90 (2): 336-350.</li>
+            <li>Garcia-Alvarez-Coque, J.-M., I. Taghouti, and V. Martinez-Gomez. 2020. “Changes in Aflatoxin Standards.” <em>Applied Economic Perspectives and Policy</em> 42 (3): 524-541.</li>
+            <li>Gebrehiwet, Y., S. Ngqangweni, and J. F. Kirsten. 2007. “Quantifying the Trade Effect of SPS Regulations.” <em>Agrekon</em> 46 (1): 23-39.</li>
+            <li>Jiang, D., X. Li, Q. Li, and R. Li. 2023. “The Effect of Maximum Residue Limits on Agri-Food Trade.” <em>German Journal of Agricultural Economics</em> 72 (3): 185-203.</li>
+            <li>Otsuki, T., J. S. Wilson, and M. Sewadeh. 2001. “Saving Two in a Billion.” <em>Food Policy</em> 26 (5): 495-514.</li>
+            <li>Vural, F., et al. 2019. “Quantifying the Trade and Welfare Effects of EU Aflatoxin Regulations on Dried Fruits.” <em>Agricultural Economics</em> 47 (1): 99-117.</li>
+            <li>Xiong, B., and J. C. Beghin. 2012. “Does European Aflatoxin Regulation Hurt Groundnut Exporters from Africa?” <em>European Review of Agricultural Economics</em> 39 (4): 589-609.</li>
+          </ul>
+        </section>
+
+        <section class="proposal-section proposal-links">
+          <a class="button" href="assets/docs/proposal.tex">Open proposal.tex</a>
+        </section>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

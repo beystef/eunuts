@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+
+% Required Packages
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Title formatting
+\title{\textbf{Stage B Proposal: The Causal Impact of EU Aflatoxin Regulations on Global Nut Trade Pricing Dynamics}}
+\author{Yusuf Efdal Y{\i}lmaz} 
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Research Question and Motivation}
+
+\textbf{Research Question.} What is the causal impact of staggered European Union (EU) aflatoxin border regulations on the bilateral export unit values of susceptible tree nuts and oilseeds from major producing countries?
+
+This project examines the impact of the tightening and enforcement of EU aflatoxin regulations, which have been phased in at varying times for different products, countries, and entry points, on the pricing structure of the international trade in nuts. The key channels to consider are (i) trade destruction, or reduced access, and (ii) quality upgrading, or increased export unit values due to the filtering out of lower quality goods. By using unit values, the paper attempts to disentangle the quality improvements versus protectionist effects of aflatoxin regulations.
+
+The underlying motivation stems from the increasing importance of non-tariff measures (NTMs) in agricultural trade. Trade agreements over time have led to a reduction in tariffs, but sanitary and phytosanitary (SPS) measures and maximum residue limits (MRLs) now dominate agricultural trade policy. The European Union has stringent measures for aflatoxin levels in nuts and enforces them through border checks and notification systems. For many developing and emerging countries, this has been a major factor in asymmetric market access and a loss of export revenue. Turkey, being the world's largest exporter of hazelnuts and a country under intense scrutiny for aflatoxin levels by the European Union, is a case in point. Turkish hazelnuts and dried fruit products feature prominently among frequently detained products in the European Union's Rapid Alert System for Food and Feed (RASFF), and this personal and regional connection serves as a springboard for the analysis.
+
+Knowledge of these channels is relevant to trade policy and food safety controversies. If aflatoxin regulations primarily screen out low-quality shipments at the cost of higher prices for compliant exporters, they may increase consumer welfare with minimal harm to efficient producers. If they bind exporters and do not provide quality benefits, they may imply disguised protectionism. This research seeks to contribute high-frequency evidence of the impact of EU aflatoxin regulations on export unit values of nuts to the debate in the WTO SPS committee and in exporting countries.
+
+\section{Short Literature Discussion}
+
+The empirical results from the SPS measures and MRLs literature point to large but varied impacts of SPS policies and MRLs on agricultural trade. A large share of the literature has employed the gravity model approach, which is particularly well-suited for measuring aggregate trade costs between trade partners. However, these approaches are limited for analyzing price dynamics in pairs and enforcement timing, which constitutes an important limitation that the present study addresses.
+
+The first strand employs the gravity model approach to estimate the aggregate impacts of SPS policies. Anders and Caswell (2009)\cite{anders2009} report that the imposition of HACCP standards led to a reduction in total seafood imports into the US, although the effects were differentiated by origin, negative for developing countries and positive for the major exporting countries. Disdier, Fontagné, and Mimouni (2008)\cite{disdier2008} report that SPS and TBT policies were significant in reducing the exports of developing countries’ agricultural products to OECD countries. Gebrehiwet, Ngqangweni, and Kirsten (2007)\cite{gebrehiwet2007} report that stringent standards in controlling aflatoxins in food products constrained South Africa's food exports, particularly relative to Codex standards.
+
+A second strand focuses on regulations related to aflatoxin and exports of developing countries. Otsuki et al. (2001)\cite{otsuki2001} estimate that if the EU adopts stricter regulations on aflatoxin, exports from Africa would be substantially reduced compared with international standards. Similarly, Vural and Akgüngör (2019)\cite{vural2019} find that stricter MRL regulations have a negative effect on export performance for dried fruits. Nevertheless, welfare effects are found to be positive. Garcia-Alvarez-Coque, Taghouti, and Martinez-Gomez (2020)\cite{garcia2020} examine border controls in the EU using RASFF. They find that aflatoxin standards significantly affect the frequency of border controls and enforcement patterns.
+
+A third strand focuses on heterogeneous effects caused by adaptation and quality upgrading. In a study by Xiong and Beghin (2012)\cite{xiong2012} using a Heckman selection model, it is reported that there is no strong evidence of negative trade effects when correcting for selection bias, but rather the significance of domestic supply constraints. Jiang et al. (2023)\cite{jiang2023} find heterogeneous effects for Chinese agri-food exports caused by stricter pesticide MRL regulations. Crivelli and Gröschl (2016)\cite{crivelli2016} find a negative effect of SPS measures on the probability of entry but a positive effect on trade volumes.
+
+Nonetheless, there are gaps that need to be bridged. The first gap is that none of the existing studies utilizes the monthly variation of enforcement timing for each product to estimate the response of prices for each pair of countries. The second, and more important, gap is that the majority of the studies, including Otsuki et al. (2001), Vural et al. (2019), and Disdier et al. (2008), rely on trade values rather than export unit values. This limits their ability to directly distinguish between reductions in trade quantities and shifts toward higher-quality (higher-priced) products. This study attempts to fill this gap by utilizing unit values as the outcome variable for the 2-way FE model, which includes a placebo test for low-risk products, walnuts, and sesame.
+
+\section{Data Plan}
+
+The project will construct a high-frequency panel data set for exporters-importers-commodities-months, denoted by index $(i,j,c,t)$. The sample will range from January 2000 to December 2023, allowing for a long pre- and post-regulation sample. Monthly data will also help avoid pooling months before and after treatment in a yearly average, which would wash out treatment effects.
+
+The exporters included are the top tree nuts or peanut exporters. The "treated" exporters are those that face EU aflatoxin border checks, including emerging economies (e.g., Turkey, Georgia, Iran) and high-income economies (e.g., the United States, Chile). On the other side, the treated importers are the key entry points for the EU (e.g., Germany, France, Italy, the Netherlands, Spain), while non-EU countries (e.g., Switzerland, Russia, United Kingdom post-2020) will serve as the control group. Among the key EU producers, Italy and Spain will serve as the exporter-side control group, although it is likely that intra-EU trade will either be excluded from the estimation or interacted with an intra-EU dummy, as goods moved within the single market are not subject to the same level of EU border inspection.
+
+The products are identified at the 6-digit level of the Harmonized System (HS). The treatment group is made up of the high-aflatoxin-risk products: hazelnuts (080221-22), pistachios (080251-52), almonds (080211-12), and peanuts (120241-42). The placebo group is made up of the low-risk products walnuts (080231-32) and sesame seeds (120740), which share trade partners and transport arrangements but vary in the level of aflatoxin contamination and EU attention.
+
+The monthly bilateral trade values and trade quantities from the UN Comtrade Database are employed for calculating export unit values, which are calculated by dividing the value by the quantity. The policy variables are binary measures of the aflatoxin policy, where the construction of the binary measures involves (1) notification of adoption months through TRAINS notifications of new MRLs or more stringent border measures, and (2) validation of the timing of the policy through RASFF border notifications. In cases where the triplet-month construction is too data-intensive, a binary pre/post measure will be employed for each product-origin.
+
+The bilateral HS6 tariff data from WITS/TRAINS is matched by months for each year. The omission of the customs union variable is driven by the enforcement of EU aflatoxin regulations through origin-based SPS measures, irrespective of trade preferences, as indicated by the stringent checks faced by Turkey, even as a member of the EU’s customs union. The tariff effects are controlled through the applied tariff control. The zero trade flow is retained, where the robustness of the log specification is checked. Table~\ref{tab:variables} provides a summary of the variables.
+
+\begin{table}[h]
+\centering
+\caption{Summary of Key Variables}
+\label{tab:variables}
+\begin{tabular}{@{}llp{7.5cm}@{}}
+\toprule
+\textbf{Role} & \textbf{Variable} & \textbf{Description} \\
+\midrule
+Outcome ($Y$) & $\ln(UV_{ijct})$ & Log export unit value (USD/kg) of HS6 product $c$ from exporter $i$ to importer $j$ in month $t$ \\[4pt]
+Main explan.\ ($X$) & $\text{Policy}_{ijct}^{(d)}$ & $=1$ when aflatoxin regime issued at date $d$ is active for $(i,j,c)$ in month $t$ \\[4pt]
+Control & $\text{Tariff}_{ijc\tau(t)}$ & Applied bilateral ad valorem tariff (HS6, annual, WITS/TRAINS) \\[4pt]
+Fixed effects & $\delta_{ic}$, $\lambda_{jt}$, $\theta_m$ & Exporter--commodity, importer--month, and month-of-year FE \\[4pt]
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Empirical Model and Specification Choices}
+
+The baseline specification relates monthly export unit values to the currently active aflatoxin regime:
+\begin{equation}
+\label{eq:baseline_uv}
+\ln\!\left(UV_{ijct}\right)
+= \beta_0
++ \sum_{d} \beta_d \,\text{Policy}_{ijct}^{(d)}
++ \beta_1 \,\text{Tariff}_{ijc\tau(t)}
++ \delta_{ic}
++ \lambda_{jt}
++ \theta_m
++ \varepsilon_{ijct},
+\end{equation}
+where $\tau(t)$ maps month $t$ to its calendar year. For a given $(i,j,c)$ with policy dates $d_1 < d_2 < \dots < d_K$, each $\text{Policy}_{ijct}^{(d_k)}$ equals one only in $[d_k, d_{k+1}-1]$ (with $\text{Policy}^{(d_K)}=1$ for $t \geq d_K$). All dummies are zero before $d_1$, so each $\beta_d$ measures the shift in log unit values under regime $d$ relative to the pre-policy period, conditional on fixed effects and tariffs.
+
+Exporter commodity fixed effects, $\delta_{ic}$, account for time-invariant origin-product characteristics, such as agro-climatic conditions or long-run quality positioning. Importer time fixed effects, $\lambda_{jt}$, pick up demand effects, macro-economic conditions, and price changes common to an importing country in month $t$. Month-of-year fixed effects, $\theta_m$, account for seasonal patterns in harvesting and shipping. The standard errors are clustered at the exporter-importer-commodity level.
+
+\subsubsection*{Expected Signs}
+
+The sign of $\beta_d$ is theoretically ambiguous, and it is the key empirical issue. In the \textit{quality-upgrading} channel, only better quality shipments are allowed by the stricter screening, hence the shift is upward ($\beta_d > 0$). In the \textit{trade-destruction} channel, either reduced demand or increased exporter power can cause unit values to fall ($\beta_d < 0$). If $\beta_d > 0$, it supports the quality-filter view, while $\beta_d < 0$ supports the protectionist barriers view. For tariffs, I predict $\beta_1 \leq 0$: if tariffs are raised, they will raise the price paid by importers, which could reduce the price received by exporters.
+
+\subsection{Functional Form Choice}
+
+I employ a log-linear specification for three reasons. First, unit values are positive, right-skewed, and vary greatly, and the logarithm helps to normalize the distribution and improve OLS performance. Second, the coefficients on our policy variables are easily interpretable in terms of percentage effects. Finally, I used unit tariff values in levels to avoid the problem of undefined logarithms for zero or near-zero tariffs, which would also yield a clear semi-elasticity effect of one percentage point change in tariffs. A level-level specification is not preferred, as it would overweight high unit value observations and fail to yield percentage effects. A log-log specification would require ad hoc corrections for the presence of zero tariffs, such as $\ln(1 + \text{Tariff})$, and is therefore not pursued. For robustness, I plan to add a quadratic tariff term ($\text{Tariff}^2$) to the baseline to test whether the tariff--price relationship exhibits non-linearity.
+
+\section{Endogeneity and Causal Interpretation}
+
+\textbf{Event-study diagnostics.} An event study extension around the first policy date $d_1$ for all $(i, j, c)$ will involve replacing the policy dummies with lead and lag indicators for months relative to $d_1$, leaving out one reference period, such as the month immediately prior to $d_1$, as a baseline. I will also plot the lead coefficients (pre-policy months), and the lag coefficients (post-policy months), along with confidence intervals. A flat pattern for the leads will help to support the parallel trends assumption, while the lags will help to identify the evolution of unit values post-tightening.
+
+\textbf{Omitted variables.} Time-invariant exporter product confounding factors (agro-climatic conditions, processing infrastructure) are controlled for through $\delta_{ic}$. Demand-side shocks common to an importer in a specific month (income, fuel prices, EU-wide factors) are captured through $\lambda_{jt}$.
+
+\textbf{Reverse causality.} One concern is that changes in prices induce a response from regulators. However, EU regulations on aflatoxins are subject to a legislative process and WTO notification, which takes months or even years, making it highly unlikely that they are reacting to short-run changes in prices. The event study will also allow us to identify any pre-policy changes in prices that could indicate reverse causation.
+
+\textbf{Measurement error.} The unit values, calculated by dividing trade value by quantity, are inherently noisy. There can be errors due to misreporting, unit mismatches, and compositional changes within HS6. The robustness check will involve trimming unit values at the 1st and 99th percentiles, as well as limiting the sample to only exporters with consistent reporting.
+
+\textbf{Falsification test (placebo group).} In order to validate that the TWFE estimates are not driven by any omitted, concurrent macroeconomic events that impacted European agricultural imports as a whole, the baseline model will be re-run on a placebo sample of low-risk, low-aflatoxin-containing products (i.e., walnuts and sesame seeds). Theoretically, since these products have similar trade patterns but face minimal SPS controls, the policy estimates ($\beta_d$) should equal zero. A null result for this placebo regression will strongly validate the causal identification of the policy effect for the treated group.
+
+\textbf{Selection bias.} If some of those exporter–importer pairs leave the market altogether due to stricter regulations, then the observed unit values will be conditioned on survival. Xiong and Beghin (2012)\cite{xiong2012}, one of the references included in this proposal, deals precisely with this problem and finds that accounting for it has a significant impact on estimated effects of aflatoxin contamination. If selection appears empirically important, I will also explore differences in extensive margin behavior (i.e., the number of active pairs over time) for high-risk and low-risk products in both the EU and non-EU markets to gauge the magnitude of attrition effects.
+
+\newpage
+\begin{thebibliography}{99}
+
+\bibitem{anders2009} 
+Anders, S., and J. A. Caswell. 2009. 
+``Standards as Barriers versus Standards as Catalysts: Assessing the Impact of HACCP Implementation on U.S. Seafood Imports.'' 
+\textit{American Journal of Agricultural Economics} 91 (2): 310--321.
+
+\bibitem{crivelli2016}
+Crivelli, P., and J. Gr\"{o}schl. 2016. 
+``The Impact of Sanitary and Phytosanitary Measures on Market Entry and Trade Flows.'' 
+\textit{The World Economy} 39 (3): 444--473.
+
+\bibitem{disdier2008} 
+Disdier, A.-C., L. Fontagn\'{e}, and M. Mimouni. 2008. 
+``The Impact of Regulations on Agricultural Trade: Evidence from the SPS and TBT Agreements.'' 
+\textit{American Journal of Agricultural Economics} 90 (2): 336--350.
+
+\bibitem{garcia2020} 
+Garcia-Alvarez-Coque, J.-M., I. Taghouti, and V. Martinez-Gomez. 2020. 
+``Changes in Aflatoxin Standards: Implications for EU Border Controls of Nut Imports.'' 
+\textit{Applied Economic Perspectives and Policy} 42 (3): 524--541. 
+
+\bibitem{gebrehiwet2007}
+Gebrehiwet, Y., S. Ngqangweni, and J. F. Kirsten. 2007. 
+``Quantifying the Trade Effect of Sanitary and Phytosanitary Regulations of OECD Countries on South African Food Exports.'' 
+\textit{Agrekon} 46 (1): 23--39.
+
+\bibitem{jiang2023}
+Jiang, D., X. Li, Q. Li, and R. Li. 2023. 
+``The Effect of Maximum Residue Limits on Agri-Food Trade: Evidence from Chinese Exports to the EU.'' 
+\textit{German Journal of Agricultural Economics} 72 (3): 185--203.
+
+\bibitem{otsuki2001}
+Otsuki, T., J. S. Wilson, and M. Sewadeh. 2001. 
+``Saving Two in a Billion: Quantifying the Trade Effect of European Food Safety Standards on African Exports.'' 
+\textit{Food Policy} 26 (5): 495--514.
+
+\bibitem{vural2019} 
+Vural, F., et al. 2019. 
+``Quantifying the Trade and Welfare Effects of EU Aflatoxin Regulations on Dried Fruits.'' 
+\textit{Agricultural Economics} 47 (1): 99--117.
+
+\bibitem{xiong2012} 
+Xiong, B., and J. C. Beghin. 2012. 
+``Does European Aflatoxin Regulation Hurt Groundnut Exporters from Africa?'' 
+\textit{European Review of Agricultural Economics} 39 (4): 589--609.
+
+\end{thebibliography}
+
+\end{document}
